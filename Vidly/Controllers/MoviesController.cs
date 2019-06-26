@@ -13,12 +13,16 @@ namespace Vidly.Controllers
         public ActionResult Random()
 
         {
-            
+
             var movie = new Movie()
             {
                 Name = "Tom And Jerry"
             };
-            return View(movie);
+            //    return View(movie);
+            //    return Content("Hello Boss");
+            //    return HttpNotFound();
+            //    return  new EmptyResult();
+            return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
         }
     }
 }
