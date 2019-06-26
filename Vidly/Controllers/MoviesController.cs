@@ -40,7 +40,7 @@ namespace Vidly.Controllers
             // nếu là chuỗi hoặc không gian trắng
             if (String.IsNullOrWhiteSpace(sortBy))
             {
-                sortBy = "Name";   
+                sortBy = "Name";        
             }
 
             return Content(String.Format("pageIndex={0}$sortBy={1}",pageIndex,sortBy));
